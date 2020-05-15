@@ -11,7 +11,7 @@ keywords = ["epub", "ebook", "cli"]
 categories = ["command-line-utilities"]
 
 [badges]
-maintenance = "experimental"
+maintenance = { status = "experimental" }
 
 [profile.release]
 lto = true
