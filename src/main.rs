@@ -15,8 +15,9 @@ fn main() {
                     .get_resource_str_by_path(url.path().trim_start_matches('/'))
                     .expect("failed to load chapter");
                 let markdown = html2md::parse_html(&html);
+                let styled = cursive::utils::markup::markdown::parse(markdown);
                 siv.add_fullscreen_layer(cursive::views::Dialog::around(cursive::views::Panel::new(
-                    cursive::views::TextView::new(markdown).scrollable(),
+                    cursive::views::TextView::new(styled).scrollable(),
                 )).button("Back", |s| { s.pop_layer(); }));
             },
         );
