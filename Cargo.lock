@@ -302,6 +302,7 @@ dependencies = [
  "owning_ref",
  "pulldown-cmark",
  "signal-hook",
+ "toml",
  "unicode-segmentation",
  "unicode-width",
  "xi-unicode",
@@ -725,6 +726,7 @@ dependencies = [
  "epub",
  "html2md",
  "url",
+ "xdg",
 ]
 
 [[package]]
@@ -1315,6 +1317,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "toml"
+version = "0.5.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ffc92d160b1eef40665be3a05630d003936a3bc7da7421277846c2613e92c71a"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "unicase"
 version = "2.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1472,6 +1483,12 @@ dependencies = [
  "winapi 0.2.8",
  "winapi-build",
 ]
+
+[[package]]
+name = "xdg"
+version = "2.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d089681aa106a86fade1b0128fb5daf07d5867a509ab036d99988dec80429a57"
 
 [[package]]
 name = "xi-unicode"

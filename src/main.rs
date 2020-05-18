@@ -23,5 +23,12 @@ fn main() {
         );
     let mut siv = cursive::default();
     siv.add_layer(cursive::views::Dialog::around(select.scrollable()).title("Select a chapter").button("Back", |s| { s.quit(); }));
+    let xdg_dirs = xdg::BaseDirectories::with_prefix("myne").unwrap();
+    match xdg_dirs.find_config_file("theme.toml") {
+        Some(pb) => {
+            siv.load_theme_file(pb).unwrap();
+        }
+        None => {}
+    }
     siv.run();
 }
